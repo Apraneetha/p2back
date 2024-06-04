@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: username 
-          image: myregs.azurecr.io/username
+          image: myregs.azurecr.io/username:26
           env:
           - name : DB_URL
             valueFrom: 
