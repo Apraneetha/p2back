@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: revhire-user
-          image: forproject.azurecr.io/userservice
+          image: forproject.azurecr.io/userservice:9
           env:
           - name : DB_URL
             valueFrom: 
