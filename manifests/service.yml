@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: username
+    name: userservice
 spec:
     type: LoadBalancer
     ports:
     - port: 8082
     selector:
-        app: username
+        app: revhire-user
