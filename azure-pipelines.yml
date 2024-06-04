@@ -15,7 +15,7 @@ variables:
   imageRepository: 'userservice'
   containerRegistry: 'forproject.azurecr.io'
   dockerfilePath: '**/Dockerfile'
-  tag: '$(Build.BuildId)'
+  tag: 'v1'
   imagePullSecret: 'forproject487b-auth'
 
   # Agent VM image name
