@@ -1,20 +1,21 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: username 
+  name: revhire-user
+  namespace: default
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: username
+      app: revhire-user
   template:
     metadata:
       labels:
-        app: username 
+        app : revhire-user
     spec:
       containers:
-        - name: username 
-          image: myregs.azurecr.io/username:26
+        - name: revhire-user
+          image: myappreg123.azurecr.io/userservice
           env:
           - name : DB_URL
             valueFrom: 
