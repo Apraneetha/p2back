@@ -47,7 +47,10 @@ stages:
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
-
+- task: KubernetesManifest@0
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'aksforproject-default'
   jobs:
   - deployment: Deploy
     displayName: Deploy
