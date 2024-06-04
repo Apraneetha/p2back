@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: username 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: username
+  template:
+    metadata:
+      labels:
+        app: username 
+    spec:
+      containers:
+        - name: username 
+          image: myregs.azurecr.io/username
+          ports:
+          - containerPort: 8081
